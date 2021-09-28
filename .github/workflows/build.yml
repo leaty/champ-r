@@ -19,17 +19,23 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
+    - name: Cache pnpm modules
+      uses: actions/cache@v2
       with:
-        node-version: '14'
-        cache: 'npm'
+        path: ~/.pnpm-store
+        key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-
+
+    - uses: pnpm/action-setup@v2.0.1
+      with:
+        version: 6
+        run_install: true
 
     - name: Build
       run: |
         $sha = (git rev-parse --short HEAD)
-        npm install -g pnpm
-        pnpm install
-        $env:SHORT_SHA=$sha; pnpx build:ci
+        $env:SHORT_SHA=$sha; pnpm build:ci
 
     - name: Move artifacts
       id: vars
