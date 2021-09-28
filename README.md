@@ -59,22 +59,22 @@ https://github.com/cangzhang/champ-r/releases
 ### Prerequisite
 
 - [Node.js](https://nodejs.org/en/) >= 10
-- [yarn](https://classic.yarnpkg.com/lang/en/)
+- [pnpm](https://pnpm.io/)
 
 ### Install dependencies
 
 ```console
-yarn
+pnpm i
 ```
 
 ### Start
 
 ```console
-yarn start
+pnpm start
 ```
 
 ### Build
 
 ```console
-yarn build:local
+pnpm build:local
 ```
