@@ -58,7 +58,7 @@ https://github.com/cangzhang/champ-r/releases
 
 ### Prerequisite
 
-- [Node.js](https://nodejs.org/en/) >= 10
+- [Node.js](https://nodejs.org/en/) >= 10 < 16 (fibers are not working anymore on node 16+) More info [here](https://github.com/laverdet/node-fibers)
 - [yarn](https://classic.yarnpkg.com/lang/en/)
 
 ### Install dependencies
