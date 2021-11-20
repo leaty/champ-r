@@ -6,7 +6,7 @@
   "productName": "ChampR",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cangzhang/champ-r.git"
+    "url": "https://github.com/GeorgeV220/champ-r.git"
   },
   "homepage": "./",
   "author": {
@@ -23,9 +23,9 @@
     "start:electron": "nodemon --exec \"yarn clean:main && yarn compile:main && run-electron build/main.js --inspect=5858\"",
     "start:react": "cross-env BROWSER=none NODE_ENV=development node scripts/start.js",
     "start": "concurrently \"yarn start:react\" \"wait-on http://localhost:3000 && yarn start:electron\"",
-    "dist:local": "cross-env yarn compile:main && electron-builder --win --x64 -p never",
-    "dist:local-dir": "cross-env yarn compile:main && electron-builder --win --x64 -p never --dir",
-    "dist": "cross-env yarn compile:main && electron-builder --win --x64 -p always",
+    "dist:local": "cross-env yarn compile:main && electron-builder --win --linux deb tar.gz --x64 -p never",
+    "dist:local-dir": "cross-env yarn compile:main && electron-builder --win --linux deb tar.gz --x64 -p never --dir",
+    "dist": "cross-env yarn compile:main && electron-builder --win --linux deb tar.gz --x64 -p always",
     "build:react": "node scripts/build.js",
     "build:local": "cross-env yarn build:react && yarn dist:local",
     "build:local-dir": "cross-env yarn build:react && yarn dist:local-dir",
@@ -189,6 +189,10 @@
     "win": {
       "icon": "./resources/app-icon.png",
       "requestedExecutionLevel": "requireAdministrator"
+    },
+    "linux": {
+      "icon": "./resources/app-icon.png",
+      "category": "Utility"
     },
     "nsis": {
       "perMachine": true
