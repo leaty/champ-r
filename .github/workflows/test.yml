@@ -66,18 +66,15 @@ jobs:
         $file = Get-ChildItem -Path ./dist/artifacts/ -Filter "*.tar.gz" | select-object -first 1
         $newName = "$($file.BaseName).$($sha)$($file.Extension)"
         Rename-Item -Path $file.FullName -NewName $newName
-        echo "::set-output name=fileName::$($newName)"
         $file = Get-ChildItem -Path ./dist/artifacts/ -Filter "*.exe" | select-object -first 1
         $newName = "$($file.BaseName).$($sha)$($file.Extension)"
         Rename-Item -Path $file.FullName -NewName $newName
-        echo "::set-output name=fileName::$($newName)"
         $file = Get-ChildItem -Path ./dist/artifacts/ -Filter "*.deb" | select-object -first 1
         $newName = "$($file.BaseName).$($sha)$($file.Extension)"
         Rename-Item -Path $file.FullName -NewName $newName
-        echo "::set-output name=fileName::$($newName)"
 
     - name: Upload artifacts
-      uses: actions/upload-artifact@v1.0.0
+      uses: actions/upload-artifact@v2
       with:
-        name: ${{ steps.vars.outputs.fileName }}
+        name: Artifacts
         path: "./dist/artifacts"
