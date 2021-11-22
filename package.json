@@ -14,6 +14,13 @@
     "email": "cangzan@gmail.com",
     "url": "https://github.com/cangzhang"
   },
+  "maintainers": [
+    {
+      "name": "GeorgeV220",
+      "email": "georgev22.github@gmail.com",
+      "url": "https://githuv.com/GeorgeV220"
+    }
+  ],
   "main": "build/main.js",
   "scripts": {
     "prepare": "husky install",
@@ -23,9 +30,9 @@
     "start:electron": "nodemon --exec \"yarn clean:main && yarn compile:main && run-electron build/main.js --inspect=5858\"",
     "start:react": "cross-env BROWSER=none NODE_ENV=development node scripts/start.js",
     "start": "concurrently \"yarn start:react\" \"wait-on http://localhost:3000 && yarn start:electron\"",
-    "dist:local": "cross-env yarn compile:main && electron-builder --win --linux deb tar.gz --x64 -p never",
-    "dist:local-dir": "cross-env yarn compile:main && electron-builder --win --linux deb tar.gz --x64 -p never --dir",
-    "dist": "cross-env yarn compile:main && electron-builder --win --linux deb tar.gz --x64 -p always",
+    "dist:local": "cross-env yarn compile:main && electron-builder --win --linux deb tar.gz pacman rpm --x64 -p never",
+    "dist:local-dir": "cross-env yarn compile:main && electron-builder --win --linux deb tar.gz pacman rpm --x64 -p never --dir",
+    "dist": "cross-env yarn compile:main && electron-builder --win --linux deb tar.gz pacman rpm --x64 -p always",
     "build:react": "node scripts/build.js",
     "build:local": "cross-env yarn build:react && yarn dist:local",
     "build:local-dir": "cross-env yarn build:react && yarn dist:local-dir",
