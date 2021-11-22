@@ -2,7 +2,7 @@
 
 [![](https://img.shields.io/github/v/release/GeorgeV220/champ-r?label=LATEST%20VERSION&style=for-the-badge)](https://github.com/GeorgeV220/champ-r/releases/latest)
 [![](https://img.shields.io/github/downloads/GeorgeV220/champ-r/total?style=for-the-badge)](https://github.com/GeorgeV220/champ-r/releases)
-[![](https://img.shields.io/github/workflow/status/GeorgeV220/champ-r/%F0%9F%98%BC%20Test%20Build?style=for-the-badge&color=65C0A3)](https://github.com/GeorgeV220/champ-r/actions)
+[![](https://img.shields.io/github/workflow/status/GeorgeV220/champ-r/Test%20Build?style=for-the-badge&color=65C0A3)](https://github.com/GeorgeV220/champ-r/actions)
 
 <img src="https://user-images.githubusercontent.com/1357073/119595829-bc218680-be10-11eb-8e06-cb47902a7d11.png" height="400" /> <img src="https://user-images.githubusercontent.com/1357073/119310086-da1ca900-bca1-11eb-9d1e-73cae2b36c0c.png" height="400" />
 
@@ -20,6 +20,7 @@ Yet another League of Legends helper.
     - 🇨🇳 `Chinese`
     - 🇺🇸 `English`
     - 🇫🇷 `French`
+    - 🇬🇷 `Greek`
 - ℹ️ Update notifier
 - 😎 Multiple data sources for **Summoner's Rift** & **ARAM**
   - `op.gg`

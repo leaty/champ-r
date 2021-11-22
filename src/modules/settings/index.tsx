@@ -28,6 +28,10 @@ const LangList: ILangItem[] = [
     label: 'French (FR)',
     value: window.bridge.LanguageSet.frFR,
   },
+  {
+    label: 'Ελληνικά (GR)',
+    value: window.bridge.LanguageSet.elGR,
+  },
 ];
 const getLangItem = (value: string) => LangList.find((i) => i.value === value);
 
