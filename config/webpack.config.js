@@ -477,7 +477,7 @@ module.exports = function (webpackEnv) {
           },
           isEnvProduction
             ? {
-              enableGA: true,
+              enableGA: false,
               minify: {
                 removeComments: true,
                 collapseWhitespace: true,
