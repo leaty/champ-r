@@ -1,4 +1,5 @@
 @import '~normalize.css';
+@import 'theme.scss';
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -26,6 +27,8 @@ body {
     helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: $color-background;
+  color: $color-text;
 
   //color: #ffffff;
   font-weight: 600;

@@ -3,7 +3,7 @@ import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { Client as Styletron } from 'styletron-engine-atomic';
 import { Provider as StyletronProvider } from 'styletron-react';
-import { LightTheme, BaseProvider } from 'baseui';
+import { DarkTheme, BaseProvider } from 'baseui';
 import { SnackbarProvider, PLACEMENT } from 'baseui/snackbar';
 
 import AppContext from 'src/share/context';
@@ -65,7 +65,7 @@ const App = () => {
   return (
     <AppContext.Provider value={contextValue}>
       <StyletronProvider value={engine}>
-        <BaseProvider theme={LightTheme}>
+        <BaseProvider theme={DarkTheme}>
           <SnackbarProvider
             placement={PLACEMENT.bottom}
             overrides={{

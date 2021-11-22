@@ -1,3 +1,5 @@
+@import 'theme.scss';
+
 @font-face {
   font-family: 'Cinzel Decorative';
   src: url('~src/assets/fonts/CinzelDecorative-Regular.ttf');
@@ -37,7 +39,7 @@
     padding: 0.2em 1em;
     line-height: 2.4em;
 
-    color: #000000;
+    color: $color-text;
     font-weight: 500;
     font-size: 1.2ex;
 

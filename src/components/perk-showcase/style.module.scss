@@ -1,3 +1,5 @@
+@import '../../theme.scss';
+
 .item {
   display: flex;
   align-items: center;
@@ -7,7 +9,7 @@
   user-select: none;
 
   &:hover {
-    background-color: #f6f6f6;
+    background-color: $color-hover;
     cursor: pointer;
   }
 
@@ -24,20 +26,21 @@
     }
 
     .name {
-      font-size: 0.8rem;
+      font-size: 16px;
       font-weight: bold;
       color: #997328;
     }
 
     .detail {
-      font-size: 12px;
+      font-size: 14px;
+      color: #fff;
 
       > span:not(:last-child) {
         margin-right: 10px;
       }
 
       .value {
-        font-size: 13px;
+        font-size: 14px;
         font-weight: bold;
       }
 
