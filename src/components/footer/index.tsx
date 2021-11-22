@@ -29,7 +29,7 @@ export default function Footer() {
         <a
           className={cn(s.icons, s.star)}
           href='#champ-r'
-          onClick={onOpenLink(`https://github.com/cangzhang/champ-r`)}>
+          onClick={onOpenLink(`https://github.com/GeorgeV220/champ-r`)}>
           <Star size={16} color={theme.colors.warning} />
         </a>
       </StatefulTooltip>

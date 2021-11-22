@@ -44,7 +44,7 @@ const App = () => {
       const notify = new Notification(`New version available: ${info.version}`);
 
       notify.onclick = () => {
-        window.shell.openExternal(`https://github.com/cangzhang/champ-r/releases`);
+        window.shell.openExternal(`https://github.com/GeorgeV220/champ-r/releases`);
       };
     });
   }, []);
